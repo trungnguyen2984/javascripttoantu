@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input, button{
+            padding:5px;
+            margin: 5px;
+            border:1px solid lightgrey;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tìm Diện tích</h2>
+    <input type="number" id="width" placeholder="enter width"><br>
+    <input type="number" id="height" placeholder="enter height"><br>
+
+    <button type="submit" onclick="tinhDienTich();">Tính diện tích</button>
+    <div id="display"></div>
+
+    <script>
+        function tinhDienTich(){
+            let width = parseInt(document.getElementById('width').value);
+            let height = parseInt(document.getElementById('height').value);
+
+            let area = parseFloat(width*height);
+
+            document.getElementById('display').innerHTML = "The area is: " + area;
+        }
+    </script>
+</body>
+</html>
